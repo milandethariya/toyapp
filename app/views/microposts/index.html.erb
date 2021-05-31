@@ -1,0 +1,22 @@
+<html>
+<head>
+	<title>microposts</title>
+</head>
+<body>
+	<h1>Microposts</h1>
+	<table>
+			<tr>
+				<th>Content</th>
+				<th>User</th>
+				<th colspan ="2"></th>
+			</tr>
+			<% @microposts.each do |f| %>
+			<tr>
+				<td><%= f.content %></td>
+				<td><%= f.user_id %></td>
+				<td><%= link_to "edit","#" %></td>
+				<td><%= link_to"delete","#" %></td>
+			</tr>
+			<% end %>
+	</table>
+</body>

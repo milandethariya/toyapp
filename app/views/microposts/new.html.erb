@@ -1,0 +1,20 @@
+<html>
+	<head>
+		<title>New Micropost</title>
+	</head>
+	<body>
+		<h1>new micropost</h1>
+		<%= form_for(@micropost, :url => microposts_path, :method => 'post') do |f|%>
+			<%= f.label :content %>
+			<%= f.text_field :content %><br>
+
+			<%= f.label :user_id %>
+			<%= f.number_field :user_id %><br>
+
+			<%= f.submit :submit %>
+		<% end %>
+	</body>
+</html>
+
+
+
